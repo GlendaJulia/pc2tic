@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <nav class='navbar bg-nav'>
+        <a href="" class = "navbar-brand text-light">  &nbsp;&nbsp; BI As a Service App</a>
+
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="text-light display 4 mt-100" style="font-size: 80px"> Use The Power of AI For Your Business </h1>
+            </div>
+            <div class="col-md-4">
+                <div class="card mt-100">
+                    <div class="card-body">
+                        <form name="login_form" class="form">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" class="field" required>
+                
+                            <label for="password">Password</label>
+                            <input type="password" name="password" class="field" required>
+                
+                            <p class="error error--hiden"></p>
+                
+                            <input type="submit" value="Login" class="btn btn-primary btn-block bt-lg">
+                        
+                        </form>
+                        <p class="mt-2">Not a Member? <a href="/user/signup">Create Account</a> </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        
+        </div>
+        
+{% endblock%}

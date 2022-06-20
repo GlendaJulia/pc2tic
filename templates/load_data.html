@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <nav class='navbar bg-nav'>
+        <div class="bg-nav d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+            <h5 class="my-0 mr-md-auto font-weight-normal">BI as a Service</h5>
+            <pre class="tab">                                                 </pre>
+            <pre class="tab">                                                 </pre>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="#">Dashboard</a>
+                <a class="p-2 text-dark" href="#">Enterprise</a>
+                <a class="p-2 text-dark" href="#">Support</a>
+                <a class="p-2 text-dark" href="#">Pricing</a>
+                &nbsp;
+            </nav>
+            <a class="btn btn-outline-primary" href="/user/signout">Logout</a>
+        </div>
+    </nav>
+
+    <div class ="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="center">Your Info</h2>
+                        <p>
+                            <strong>Name:</strong> {{session['user']['name']}} <br>
+                            <strong>Email:</strong> {{session['user']['email']}} <br>
+                        </p>
+                
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="center">Upload Excel File</h2>
+                        <form name="load_file_form" class="form">
+                            <label for="name_data">Titulo</label>
+                            <input type="text" name="name_data" class="field" required>
+                            <input type="file" class="form-control" name="upload_file" value="">
+                            <p class="error error--hiden"></p>
+                            <br/>
+                            <br/>
+                            <input type="submit" value="Upload" class="btn btn-primary btn-block bt-lg">
+                        </form>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock%}
